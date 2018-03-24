@@ -109,7 +109,7 @@ for k=5:15
     
     lost_power(:,i)=P1*(100-eff(:,i))/1000; %kW
     
-    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125 %$
+    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125; %$
     
     cost_actual(:,i)=cost(:,i)+lost_energy(:,i); %$
     
@@ -190,7 +190,7 @@ i=6;
     
     lost_power(:,i)=P1*(100-eff(:,i))/1000; %kW
     
-    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125 %$
+    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125; %$
     
     cost_actual(:,i)=cost(:,i)+lost_energy(:,i); %$
     

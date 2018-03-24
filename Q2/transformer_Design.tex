@@ -2,7 +2,7 @@
 % This LaTeX was auto-generated from MATLAB code.
 % To make changes, update the MATLAB code and republish this document.
 
-%\documentclass{article}
+\documentclass{article}
 \usepackage{graphicx}
 \usepackage{color}
 
@@ -145,7 +145,7 @@ for k=5:15
 
     lost_power(:,i)=P1*(100-eff(:,i))/1000; %kW
 
-    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125 %$
+    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125; %$
 
     cost_actual(:,i)=cost(:,i)+lost_energy(:,i); %$
 
@@ -154,151 +154,6 @@ for k=5:15
 end
 \end{verbatim}
 
-        \color{lightgray} \begin{verbatim}
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-\end{verbatim} \color{black}
-    
 
 \subsection*{Conclusion}
 
@@ -374,7 +229,7 @@ i=6;
 
     lost_power(:,i)=P1*(100-eff(:,i))/1000; %kW
 
-    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125 %$
+    lost_energy(:,i)=lost_power(:,i)*24*365*20*0.1125; %$
 
     cost_actual(:,i)=cost(:,i)+lost_energy(:,i); %$
 
@@ -401,20 +256,7 @@ i=6;
     fprintf('Material cost is %d USD. Lost money in 20 years is %d USD. \n',cost(:,i),cost_actual(:,i));
 \end{verbatim}
 
-        \color{lightgray} \begin{verbatim}
-lost_energy =
-
-   1.0e+06 *
-
-  Columns 1 through 7
-
-    9.7864    8.9486    8.5410    8.1317    8.0751    7.9929    8.2481
-
-  Columns 8 through 11
-
-    8.4825    8.3158    8.5005    8.6646
-
-Turns ratio is 690 : 500. 
+        \color{lightgray} \begin{verbatim}Turns ratio is 690 : 500. 
 Window area is 3.247608e-02 m^2.
 Dimensions of the transformer is 7.659739e-01 x 9.664536e-01 x 3.300000e-01 m.
 Steel mass is 1.786846e+03 kg.
