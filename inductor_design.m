@@ -1,3 +1,7 @@
+%% INDUCTOR DESIGN
+% EE564 Project#1 Q1 (Analytical Calculations)
+% by G. Hande Bayazit
+
 %% Parameters
 
 in_dia= 19; %mm
@@ -107,6 +111,20 @@ fprintf('Inductance of the gapped core assuming homogeneous distribution is %d H
 %
 % # 5
 %
+
+% In this part, we may assume the fringing flux is considerable for an area
+% of 2 mm (the length of airgap) to the left and to the right of the
+% airgap. Therefore we may assume the equivalent reluctance of the magnetic
+% circuit as R_core in series with (R_gap_left||R_gap||R_gap_right). This
+% approach is not a reliable one, nevertheless it may give us an idea.
+
+rel_gap_side=2e-3/(mu_0*2e-3*ht*1e-3);
+rel_tot_2=rel_core+(1/rel_gap_side+1/rel_gap+1/rel_gap_side)^(-1);
+
+L_6=N^2/rel_tot_2;
+
+fprintf('Inductance of the gapped core including fringing flux is %d H. \n', L_6);
+
 
 
 
