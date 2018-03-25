@@ -1,0 +1,139 @@
+$begin '$base_index$'
+  $begin 'properties'
+    all_levels=000000000000
+    time(year=000000002018, month=000000000003, day=000000000025, hour=000000000017, min=000000000049, sec=000000000003)
+    version=000000000000
+  $end 'properties'
+  $begin '$base_index$'
+    $index$(pos=000000003583, lin=000000000117, lvl=000000000000)
+  $end '$base_index$'
+$end '$base_index$'
+$begin 'SolutionBlock103'
+	SolutionName='AdaptivePass'
+	SolutionID=20
+	V=668
+	$begin 'States'
+		F(VID=231, Ver=668)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	$begin 'NFSP'
+		$begin 'SubData'
+			ID=10
+			NFSP(VID=231, Ver=668, File='DV231_SOL20_NFSP10_V668.sd')
+		$end 'SubData'
+	$end 'NFSP'
+$end 'SolutionBlock103'
+$begin 'BlockMapName'
+	FileHeader='SolutionBlock4'
+	'SolutionKey(SimSetup=19, Instance=\'\', Solution=-3, VersionID=668)'='SolutionBlock106'
+	'SolutionKey(SimSetup=19, Instance=\'SetupDefinition\', Solution=-1, VersionID=668)'='SolutionBlock105'
+	'SolutionKey(SimSetup=19, Instance=\'SolutionDefinition\', Solution=20, VersionID=668)'='SolutionBlock103'
+	'SolutionKey(SimSetup=19, Instance=\'SolutionDefinition\', Solution=21, VersionID=668)'='SolutionBlock104'
+$end 'BlockMapName'
+$begin 'SolutionBlock104'
+	SolutionName='LastAdaptive'
+	SolutionID=21
+	V=668
+	$begin 'States'
+		F(VID=231, Ver=668)
+	$end 'States'
+	$begin 'Definition'
+		SamplingInterpolation=false
+		Frequencies()
+		SolutionType=1
+		CenterFreq=0
+	$end 'Definition'
+	$begin 'Fields'
+		IDDblMap(278, -1)
+		$begin 'DataMap'
+			VID=231
+			Ver=668
+			Field(DblID=278, Dir='DV231_SOL21_V668.Field278/')
+		$end 'DataMap'
+	$end 'Fields'
+$end 'SolutionBlock104'
+$begin 'SolutionBlock106'
+	ConvSetupName='eConv'
+	MaxPasses='10'
+	MinPasses='2'
+	ConvTarget='(1, 1)'
+	ConvTargetConsecPasses='N/A'
+	ConvCurrentConsecPasses='N/A'
+	c(te=8.397576328321354e-005, tri=1796, ee=0.5919626871249708, p=1, de_ee='(0.59196, N/A)')
+	c(te=8.489606202007229e-005, tri=2452, ee=0.1342688793629925, de=1.095909939817972, p=2, de_ee='(0.13427, 1.0959)')
+	c(te=8.5222340461623e-005, tri=3348, ee=0.04179744606873206, de=0.3843269449571959, p=3, de_ee='(0.041797, 0.38433)')
+$end 'SolutionBlock106'
+$begin 'SolutionBlock105'
+	SimSetupID=19
+	SimSetupName='Setup1'
+	VersionID=668
+	SolveSetupID=0
+	$begin 'CurrMeshes'
+		IDDblMap(234, 1, 237, 2, 238, 3, 279, 4, 355, 5, 373, 6, 395, 7, 414, 8, 432, 9)
+		$begin 'DataMap'
+			VID=231
+			Ver=668
+			M(DblID=238, Dir='DV231_S19_V668.cmesh238/')
+			M(DblID=279, Dir='DV231_S19_V668.cmesh279/')
+		$end 'DataMap'
+	$end 'CurrMeshes'
+	$begin 'MeshOps'
+		OPS(VID=231, Ver=668, ID=0, ID=2, ID=3, ID=4, ID=5)
+	$end 'MeshOps'
+	$begin 'LastPassNumbers'
+		LP(VID=231, Ver=668, P=3)
+	$end 'LastPassNumbers'
+	$begin 'Profiles'
+		P(VID=231, Ver=668, File='DV231_S19_V668.profile')
+	$end 'Profiles'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=231, Ver=668, Dir='DV231_S19_MI0_V668.sd/')
+		$end 'SubData'
+	$end 'MI'
+	$begin 'MeshGeomInfo'
+		MGI(VID=231, Ver=668, Dir='DV231_S19_V668_MGI/')
+	$end 'MeshGeomInfo'
+$end 'SolutionBlock105'
+$begin 'SolutionBlock4'
+	ProductName=''
+	CircuitName='Maxwell2DDesign1'
+	VersionID=668
+	PostProcess=false
+	LossLess=true
+	NextUniqueID=703
+	MoveBackwards=false
+	$begin 'VariationIDs'
+		Map(V='', ID=231)
+	$end 'VariationIDs'
+	$begin 'LinkedDataList'
+	$end 'LinkedDataList'
+	$begin 'InitialMeshes'
+		M(VID=231, Ver=668, Dir='DV231_V668.imesh/')
+	$end 'InitialMeshes'
+	$begin 'MI'
+		$begin 'SubData'
+			ID=0
+			MI(VID=231, Ver=668, Dir='DV231_MI0_V668.sd/')
+		$end 'SubData'
+	$end 'MI'
+$end 'SolutionBlock4'
+$begin '$index$'
+	$begin '$index$'
+		BlockMapName(pos=777, lin=21, lvl=0)
+		SolutionBlock106(pos=1696, lin=50, lvl=0)
+		SolutionBlock103(pos=370, lin=1, lvl=0)
+		SolutionBlock104(pos=1259, lin=28, lvl=0)
+		SolutionBlock105(pos=2210, lin=61, lvl=0)
+		SolutionBlock4(pos=3078, lin=94, lvl=0)
+		$base_index$(pos=0, lin=1, lvl=0)
+		$index$(pos=3583, lin=117, lvl=0)
+	$end '$index$'
+$end '$index$'
+                                                                                                                                                                                                                                                                                                                                                                            
