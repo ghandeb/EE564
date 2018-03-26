@@ -1,15 +1,23 @@
 \section{Transformer Design}
 
-With given parameters, a transformer is designed and optimized. MATLAB routine for this operation is present in the next section of the report.\\
+With given parameters, a transformer is designed and optimized. MATLAB code for this operation is present in this section of the report.\\
 
-Remarks and assumptions made in the optimization process are as follows:
-\\
-\begin{itemize}
+\input{transformer_Design}
 
-\item
+Here, for the design of the transformer, the main objective is to find an optimum point where $P_{core}=P_{copper}$, since this is the case where efficiency is maximum.\\
 
+These two variables are dependent on each other, since induced voltage in the tranformer includes a constant term "N*A". This implies that number of turns of the transformer should be inversely proportional to the cross-section area of the core, which are actually the parameters that determines core and copper losses.\\
 
-\end{itemize}
+A graph that shows the relationship of core loss, copper loss and efficiency is given in Figure \ref{cce}. The optimum point is chosen as the point where efficiency is maximum. However at this point, core loss and copper loss are not exactly equal to each other. This discrepancy is caused by (wire mean length) assumptions made in calculation of copper loss.
+
+\begin{figure}[H]
+\hspace{1.5cm}
+\centering\includegraphics[width=5.5in]{core_copper_eff.PNG}\\
+\caption{Relationship Between Core Loss, Copper Loss and Efficiency}
+\label{cce}
+\end{figure}
+
+Another concern in design of a transformer is obviously the price. What is important is not only the material price of the transformer, but also the money lost due to power lost while the transformer operates. Therefore cost should be considered in both cases. A graph showing this cost analysis is provided in Figure \ref{cost}. Here, the most optimum case is also same as the previous one, since its efficiency is the highest.
 
 \begin{figure}[H]
 \hspace{1.5cm}
@@ -18,19 +26,9 @@ Remarks and assumptions made in the optimization process are as follows:
 \label{cost}
 \end{figure} 
 
-\begin{figure}[H]
-\hspace{1.5cm}
-\centering\includegraphics[width=5.5in]{core_copper_eff.PNG}\\
-\caption{Relationship Between Core Loss, Copper Loss and Efficiency}
-\label{cce}
-\end{figure} 
+Different lamination types also effects the specifications of the transformer. As can be seen in Figure \ref{steel}, core losses increase with increasing lamination thickness. This would have a significant effect on efficiency.\\
 
-\begin{figure}[H]
-\hspace{1.5cm}
-\centering\includegraphics[width=4.5in]{awg.PNG}\\
-\caption{Cable Sizes in AWG System}
-\label{awg}
-\end{figure}
+In this design, first lamination type (C120-23) is considered. 
 
 \begin{figure}[H]
 \hspace{1.5cm}
@@ -38,5 +36,3 @@ Remarks and assumptions made in the optimization process are as follows:
 \caption{Properties of Steel Laminations}
 \label{steel}
 \end{figure} 
-
-\input{transformer_Design}
