@@ -3,22 +3,22 @@
 % by G. Hande Bayazit
 %% Parameters
 
-B_op=1.5; %T
+B_op=0.2; %T
 mu=1.83/800;
-f=50; %Hz
-P1= 500e3; %W
-V1=34500; %V
-V2=25000; %V
+f=100e3; %Hz
+P1= 15; %W
+V1=207; %V
+V2=15; %V
 I1=P1/V1; %A
 J=4; %A/mm^2
 a_cable=I1/J; %mm^2
 fprintf('Cable area should be around %d mm^2.\n',a_cable);
 
-% This value is close to AWG11 size.
+% This value is close to AWG34 size.
 
-a_cable=4.1684; %mm^2
-dia_cable=2.30378; %mm
-res_cable=4.1328; %Ohms/km
+a_cable=0.0201; %mm^2
+dia_cable=0.1601; %mm
+res_cable=856; %Ohms/km
 
 %% Sizing
 
@@ -27,23 +27,25 @@ res_cable=4.1328; %Ohms/km
 % them will be found with an optimization parameter "k".
 
 ff=0.5; %fill factor
-dens_steel=7650; %kg/m^3
+dens_ferrite=7650; %kg/m^3
 dens_copper=8940; %kg/m^3
-core_loss_dens=0.77; %W/kg
+core_loss_dens=380; %W/m^3
+coef=1/4800;%m^3/kg;
+core_loss_dens=core_loss_dens*coef; %kW/kg
 price_steel=3; %$/kg
 price_copper=7; %$/kg
 
 i=1;
-for k=5:15
+for k=1:10
     
-    N1(:,i)=69*k;
-    N2(:,i)=50*k;
+    N1(:,i)=7*k;
+    N2(:,i)=1*k;
     A(:,i)=V2*sqrt(2)/(2*pi*f*B_op*N1(:,i)); %m^2
     
     % Window area
     
-    x1(:,i)=dia_cable*23/ff/1000; %m
-    x2(:,i)=dia_cable*3*k/ff/1000; %m
+    x1(:,i)=dia_cable*7/ff/1000; %m
+    x2(:,i)=dia_cable*k/ff/1000; %m
     x3(:,i)=ceil(sqrt(A(:,i)*10000))/100; %m
     
     w1(:,i)=x1(:,i);
@@ -60,7 +62,7 @@ for k=5:15
     
     vol(:,i)=(e1(:,i)*e2(:,i)-w1(:,i)*w2(:,i))*x3(:,i);
     
-    m_steel(:,i)=dens_steel*vol(:,i);
+    m_steel(:,i)=dens_ferrite*vol(:,i);
     
 %     fprintf('Steel mass is %d kg.\n',m_steel(:,i));
     
@@ -122,11 +124,11 @@ end
 % Considering the optimizaton results, optimum case for the design seems to
 % be i=6, k=10. Transformer parameters are as follows:
 
-k=10;
-i=6;
+k=14;
+i=10;
 
-    N1(:,i)=69*k;
-    N2(:,i)=50*k;
+    N1(:,i)=7*k;
+    N2(:,i)=1*k;
     A(:,i)=V2*sqrt(2)/(2*pi*f*B_op*N1(:,i)); %m^2
     
     
@@ -148,7 +150,7 @@ i=6;
     
     vol(:,i)=(e1(:,i)*e2(:,i)-w1(:,i)*w2(:,i))*x3(:,i);
     
-    m_steel(:,i)=dens_steel*vol(:,i);
+    m_steel(:,i)=dens_ferrite*vol(:,i);
     
     core_loss(:,i)=core_loss_dens*m_steel(:,i);
     
